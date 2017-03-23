@@ -60,7 +60,7 @@ if (isset($_POST['btnSubmit'])) {
                            value="<?php echo $produit; ?>"/>
                 </div>
                 <input class="btn btn-default" type="reset" name="btnReset" value="Effacer"/>
-                <input class="btn btn-success" type="submit" name="btnSubmit" value="Envoyer"/>
+                <input class="btn btn-success" type="submit" name="btnSubmit" value="Sélectionner"/>
             </form>
         </div>
     </div>

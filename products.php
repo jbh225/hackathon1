@@ -90,11 +90,11 @@
                         <p>
             ';
                             if ( property_exists($product, 'nutrition_grades') ) {
-                                echo '<img class="nutrigrade" src="img/nutriscore-'.$product->nutrition_grades.'.svg" />';
+                                echo '<img class="nutrigrade" src="images/nutriscore-'.$product->nutrition_grades.'.svg" />';
                                 echo '&nbsp;&nbsp;';
                             }
             echo '
-                            <a href="calories.html" class="btn btn-default" role="button">Manger</a>
+                            <a href="calories.php?id='.$product->id.'" class="btn btn-default" role="button">Manger</a>
                         </p>
                     </div>
                 </div>

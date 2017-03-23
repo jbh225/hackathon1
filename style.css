@@ -40,3 +40,8 @@
 .caption {
     height: 120px;
 }
+img.nutrigrade {
+    height:40px;
+    margin-top:-10px;
+    border:0px;
+}
