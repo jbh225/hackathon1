@@ -1,0 +1,302 @@
+sport,kcal/h
+"Aerobic, enseignement dans une classe",354
+"Aerobic, faible impact",295
+"Aerobic, fort impact",413
+"Aerobic, general",384
+"Agriculture, mise en boules de foin, nettoyage de la grange",472
+"Agriculture, pelleter les grains",325
+"Agriculture, traite a la main",177
+Aquagym (aqua-aerobic),236
+"Aviron, position assise, allure lente",413
+"Aviron, position assise, allure moderee",502
+"Aviron, position assise, allure vigoureuse",561
+"Aviron, position assise, allure tres vigoureuse",708
+"Badminton, hors competition",266
+"Badminton, en competition",413
+Balle au prisonier,295
+"Barman, serveur",148
+Baseball,295
+"Basket-ball, tirs aux paniers",266
+"Basket-ball, general",354
+"Basket-ball, en fauteuil roulant",384
+"Basket-ball, arbitrage",413
+"Basket-ball, en match",472
+Billard,148
+Bobsleigh,413
+"Bolo, jeu normal",354
+"Bolo, mode competition",590
+Bowling,177
+"Boxe, frappant les sacs",354
+"Boxe, entraînement (mode sparring partner)",531
+"Boxe, sur le ring, general",708
+"Broomball, ballon-balai, ballon sur glace",413
+"Canoë-kayak, allure lente",177
+"Canoë-kayak, allure moderee",413
+"Canoë-kayak, en equipe, mode competition",708
+"Catch, lutte",354
+"Chasse, general",295
+"Club de remise en forme, exercices, general",325
+Conduire un camion (position assise),118
+"Construction, a l'exterieur, remodelage",325
+"Corde a sauter, allure lente",472
+"Corde a sauter, allure moderee, general",590
+"Corde a sauter, allure rapide",708
+Course a pied,384
+"Course a pied, 8 km/h",472
+"Course a pied, 9,5 km/h",590
+"Course a pied, 10,8 km/h",649
+"Course a pied, 11,25 km/h",679
+"Course a pied, 12 km/h",738
+"Course a pied, 13 km/h",797
+"Course a pied, 13,8 km/h",826
+"Course a pied, 14,5 km/h",885
+"Course a pied, 16 km/h",944
+"Course a pied, 17,5 km/h",1062
+"Course a pied, cross country",531
+"Course a pied, en montant les escaliers",885
+"Course a pied, general",472
+"Course a pied, sur une piste, pratique en equipe",590
+"Courses de chevaux, galopant",472
+Course d'orientation,531
+Cricket,295
+Croquet,148
+Crosse,472
+Cuisson ou preparation des plats,148
+Curling,236
+"Cyclisme, < 16 km/h, loisirs",236
+"Cyclisme, de 16 a 19 km/h, allure lente",354
+"Cyclisme, 19 a 22 km/h, allure moderee",472
+"Cyclisme, 22 a 25 km/h, allure vigoureuse",590
+"Cyclisme, 25 a 30 km/h, tres rapide, en course",708
+"Cyclisme, > 32 km/h, courses",944
+"Cyclisme, VTT en montagne ou BMX",502
+"Cyclisme, velo d'appartement, allure tres lente",177
+"Cyclisme, velo d'appartement, allure lente",325
+"Cyclisme, velo d'appartement, allure moderee",413
+"Cyclisme, velo d'appartement, allure vigoureuse",620
+"Cyclisme, velo d'appartement, allure tres vigoureuse",738
+"Cyclisme, velo d'appartement, general",295
+"Danse (salle de bal, lente)",177
+"Danse, general",266
+"Danse (salle de bal, rapide)",325
+"Danse (aerobic, ballet ou moderne)",354
+"Danse de salon (en couple), lente",177
+"Danse de salon (en couple), rapide",325
+Demenager (deballant les cartons),207
+"Deplacement de meubles, dans la maison",354
+"Deplacement d'objets menagers, par escalier",531
+Deplacement d'objets menagers en portant les objets,413
+Descendre l'escalier en marchant,177
+Dormir,37
+Poser ou enlever les tapis/carrelages du sol,266
+"Entraînement en circuit, general, peu de repos",472
+"Equitation, general",236
+"Equitation, marche",148
+"Equitation, trot",384
+"Escalade, varappe, descente en rappel",472
+"Escalade, varappe, ascension de rochers",649
+Escrime,354
+"Etirements, leger",148
+"Etirements, hatha yoga",236
+"Exercices corporels, a la maison, allure legere ou moderee",266
+"Exercices corporels, a la maison, allure vigoureuse",472
+Extraction du charbon (de la mine),354
+Faire la cuisine,148
+Faire la queue (debout),75
+Faire les courses (avec un chariot),207
+Flechettes (mur ou pelouse),148
+Footbag,240
+"Football (exercices, course drapeaux, general)",472
+"Football, mode competition",590
+"Football, occasionnel, general",413
+Foresterie,472
+Frisbee (mode rythme),207
+"Frisbee, general",177
+"Frisbee, ultimate",480
+Gainage (sur les mains),410
+Golf (mini-serie ou frapper au loin),177
+Golf (utilisant le chariot),207
+Golf (tirant les clubs),295
+Golf (transportant des clubs),325
+"Golf, general",236
+"Grattage, plâtrage, peinture, mettre du papier mural",266
+"Gymnastique, general",236
+"Gymnastique suedoise, maison, effort leger/modere",210
+"Halterophilie, allure moderee",177
+"Halterophilie, allure vigoureuse",354
+Handball (jeu en equipe),472
+"Handball, general",708
+Hockey sur gazon,472
+Hockey sur glace,472
+Hors-bord,148
+Jaï-alaï (pelote basque),720
+"Jardinage, general",295
+"Jeu de palet, de boulingrin",177
+"Jogging, general",413
+"Jogging, dans l'eau (aquajogging)",472
+Jonglage,236
+Jouer un instrument tout en marchant (ex. : parade),236
+"Judo, jujitsu",590
+Karate,590
+Kayak,295
+Kickball,420
+Kick Boxing,590
+Laver le chien,207
+Les Mills BodyAttack,475
+Les Mills BodyBalance/BodyFlow,232
+Les Mills BodyCombat,481
+Les Mills BodyPump,325
+Les Mills BodyStep,478
+Les Mills Grit,549
+Les Mills RPM,449
+Lire (en s'asseyant),67
+Luge,413
+Maçonnerie,413
+Marche rapide (ex. : parade militaire),384
+"Marcher/Courir, jouant avec enfant, allure moderee",236
+"Marcher/Courir, jouant avec enfant, allure vigoureuse",295
+Masseur (position debout),236
+"Menuiserie, charpenterie, general",207
+Monocycle,295
+Moto-cross,236
+Motoneige,207
+Musculation,354
+"Musique, batterie",236
+"Musique, guitare, classique (assis)",118
+"Musique, guitare, rock and roll (debout)",177
+"Musique, piano, orgue, violon",148
+"Musique, violoncelle, flûte, cor",118
+Natation sychronisee,472
+"Natation, brasse papillon, general",660
+"Natation, brasse, general",590
+"Natation, dos, general",472
+"Natation, laps, allure moderee",472
+"Natation, laps, allure rapide",590
+"Natation, papillon, general",649
+"Natation, pour le loisir, general",354
+"Natation, sur place, allure moderee",236
+"Natation, sur place, allure rapide",590
+"Nettoyage du garage, du trottoir",236
+"Nettoyage du sol, utilisant mains et genoux",325
+"Nettoyage, allure lente ou modere",148
+"Nettoyage, dans la maison, general",207
+"Nettoyage (voiture, fenetres, etc.), lourd et vigoureux",266
+Nettoyer les gouttieres,295
+Officier de police,148
+"Pansage de chevaux, lent",210
+"Pansage de chevaux, intense",354
+Parachutisme,177
+"Patinage sur glace, 14 km/h ou moins",325
+"Patinage sur glace, allure rapide (> 14 km/h)",531
+"Patinage sur glace, allure rapide (mode competition)",885
+"Patinage sur glace, general",413
+"Patinage, roller",413
+"Peche dans la riviere, dans les echassiers",354
+"Peche sur bateau, position assise",148
+"Peche sur la berge des rivieres, position debout",207
+"Peche, general",236
+"Peche, sur la glace, position assise",118
+Pedalo,236
+"Pelleter la neige, a la main",354
+Pilates,150
+"Plongee (sous-marine, tremplin ou plate-forme)",177
+Plongee en apnee (snorkeling),295
+"Plongee sous-marine, general",413
+Polo,472
+"Pompes, intense",474
+Pompier en train d'eteindre une incendie,708
+Port de charges lourdes (comme des briques),472
+"Porter un sac a dos, general",413
+Porter entre 7 et 11 kilos en montant l'escalier,354
+Porter entre 12 et 22 kilos en montant l'escalier,472
+Poser un double-vitrage,295
+Pousser ou tirer une poussette avec enfant,148
+Pousser un fauteuil roulant,236
+"Promenader a pied, moins de 3 km/h, allure tres lente",118
+"Promenade a pied, 3 km/h, allure lente",148
+"Promenade a pied, 5 km/h, allure moderee",207
+"Promenade a pied, 5,5 km/h, en montee",236
+"Promenade a pied, 6,5 km/h, allure tres rapide",354
+"Promenade a pied, a l'aide de bequilles",236
+"Promenade a pied, en montant",472
+"Promenade a pied, piste d'herbe",295
+"Promenade a pied, transportant 1 enfant ou 7 kgs",207
+Promener le chien,177
+"Racketball, jeu normal",413
+"Racketball, mode competition",590
+Rafting,295
+Rameur; allure lente,207
+Rameur; allure moderee,413
+Rameur; allure rapide,502
+Rameur; allure tres rapide,708
+"Randonnee pedestre, cross country",354
+Raquette (sur neige),472
+Ratisser la pelouse,236
+"Redressement assis, intense",474
+Regarder la TV,45
+"Remontee mecanique, general",420
+Reparation automobile,177
+Repeindre la maison a l'exterieur,295
+Rugby,590
+Saut a ski (montee au lieu du saut en emportant les skis),413
+"Sauts avec ecart (Jumping Jack), intense",498
+"Seance de jeu avec enfant, mouvements legers",148
+S'asseoir dans une reunion,96
+"S'asseoir dans une classe, travail de bureau",104
+Skateboard,295
+"Ski sur l'eau, ski nautique",354
+"Ski sur neige, general",413
+"Ski, en descente, allure lente",295
+"Ski, en descente, allure moderee",354
+"Ski, en descente, allure vigoureuse",472
+"Ski, ski de fond, allure lente",413
+"Ski, ski de fond, allure modere",472
+"Ski, ski de fond, allure vigoureuse",531
+"Ski, ski de fond, allure course",826
+"Ski, ski de fond, en montee",974
+Snowboard,372
+"Softball, lancer rapide ou lent",295
+"Softball, arbitrage",240
+"Soins des enfants (bain, nourrir, etc.), position assise",177
+"Soins des enfants (bain, nourrir, etc.), position debout",207
+"Soudage, ou travailler dans une salle de cinema",177
+Sortir la poubelle,177
+Spinning,420
+Squash,708
+"Step, intense",876
+"Stepper, machine simulateur d'escalier",531
+Surf (couche ou debout sur la planche),177
+"Tâches menageres, faire le menage, general",207
+Tae Bo,606
+Tae Kwon Do,590
+Tai chi,236
+"Tennis de table, ping-pong",236
+"Tennis, double",354
+"Tennis, general",413
+"Tennis, simple",472
+Tir a l'arc (en tant que sport et non en situation de chasse),207
+Toilettage du cheval,354
+"Tondre la pelouse, assis sur la tondeuse",148
+"Tondre la pelouse, general",325
+"Tractions (exercice de musculation), intense",456
+Trampoline,207
+Travail (leger) dans un bureau,89
+Travailler sur l'ordinateur,81
+"Travaux d'electricite, plomberie",177
+Velo elliptique (allure moderee),410
+Velo elliptique (allure vigoureuse),485
+"Voile, bateau, planche a voile, general",180
+"Voile, en mode competition",295
+"Voile, planche a voile, general",177
+Volley-ball dans l'eau,177
+"Volley-ball, a la plage",472
+"Volley-ball, hors competition",177
+"Volley-ball, mode competition, dans un gymnase",236
+"Wallyball, general",413
+Water polo,590
+Wii baseball,210
+Wii bowling,174
+Wii boxe,324
+Wii golf,150
+Wii tennis,240
+Zumba,528
