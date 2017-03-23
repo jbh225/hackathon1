@@ -1,3 +1,20 @@
+<?php
+    if (isset($_GET['produit'])) $produit = $_GET['produit'];
+    if (isset($_GET['nbprod'])) $nbprod = $_GET['nbprod'];
+    if (isset($_GET['nbpages'])) $nbpages = $_GET['nbpages'];
+    if (isset($_GET['numpage'])) $numpage = $_GET['numpages'];
+    else $numpage = 1;
+
+    $rep = file_get_contents('https://fr-en.openfoodfacts.org/category/'.$produit.'/'.$numpage.'.json');
+    $page = json_decode($rep);
+    $products = $page->products;
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -13,6 +30,7 @@
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- Style Page 2 -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="cam.css">
 
 </head>
@@ -25,88 +43,40 @@
 </header>
 
 <div class="container">
-    <h2>Produits</h2>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>
+                Produit : <?php echo $produit; ?>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <?php echo $nbprod; ?> produits
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                page <?php echo $numpage.'/'.$nbpages; ?>
+            </h2>
+
+        </div>
+    </div>
 
     <div class="row">
-        <div class="col-lg-3 ">
-            <div class="thumbnail">
-                <img src="images/fruits.jpg" alt="...">
-                <div class="caption">
-                    <h3>Saucisson sec</h3>
-                    <p><a href="calories.html" class="btn btn-primary" role="button">Manger</a></p>
-                </div>
-            </div>
-        </div>
+    <?php
 
-        <div class="col-lg-3 ">
-            <div class="thumbnail">
-                <img src="images/fruits.jpg" alt="...">
-                <div class="caption">
-                    <h3>Saucisson sec</h3>
-                    <p><a href="calories.html" class="btn btn-primary" role="button">Manger</a></p>
+        foreach ($products as $product) {
+            if ( property_exists($product, 'image_front_thumb_url') ) $urlimg = $product->image_front_thumb_url;
+            elseif ( property_exists($product, 'image_front_small_url') ) $urlimg = $product->image_front_small_url;
+            elseif ( property_exists($product, 'image_front_url') ) $urlimg = $product->image_front_url;
+            echo '
+            <div class="col-lg-3 text-center">
+                <div class="thumbnail vignette">
+                    <img class="miniature" src="'.$urlimg.'" alt="...">
+                    <div class="caption">
+                        <h3>'.$product->product_name_fr.'</h3>
+                    </div>
+                    <p><a href="calories.html" class="btn btn-default" role="button">Manger</a></p>
                 </div>
             </div>
-        </div>
-
-        <div class="col-lg-3 ">
-            <div class="thumbnail">
-                <img src="images/fruits.jpg" alt="...">
-                <div class="caption">
-                    <h3>Saucisson sec</h3>
-                    <p><a href="calories.html" class="btn btn-primary" role="button">Manger</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 ">
-            <div class="thumbnail">
-                <img src="images/fruits.jpg" alt="...">
-                <div class="caption">
-                    <h3>Saucisson sec</h3>
-                    <p><a href="calories.html" class="btn btn-primary" role="button">Manger</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 ">
-            <div class="thumbnail">
-                <img src="images/fruits.jpg" alt="...">
-                <div class="caption">
-                    <h3>Saucisson sec</h3>
-                    <p><a href="calories.html" class="btn btn-primary" role="button">Manger</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 ">
-            <div class="thumbnail">
-                <img src="images/fruits.jpg" alt="...">
-                <div class="caption">
-                    <h3>Saucisson sec</h3>
-                    <p><a href="calories.html" class="btn btn-primary" role="button">Manger</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 ">
-            <div class="thumbnail">
-                <img src="images/fruits.jpg" alt="...">
-                <div class="caption">
-                    <h3>Saucisson sec</h3>
-                    <p><a href="calories.html" class="btn btn-primary" role="button">Manger</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 ">
-            <div class="thumbnail">
-                <img src="images/fruits.jpg" alt="...">
-                <div class="caption">
-                    <h3>Saucisson sec</h3>
-                    <p><a href="calories.html" class="btn btn-primary" role="button">Manger</a></p>
-                </div>
-            </div>
-        </div>
-
+            ';
+        }
+    ?>
+ 
     </div>
 </div>
 

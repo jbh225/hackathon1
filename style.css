@@ -28,3 +28,15 @@
     font-weight: bold;
     color: red;
 }
+
+.vignette {
+    height: 400px;
+}
+.thumbnail img {
+    height: 200px;
+    margin-top:20px;
+    border: 2px solid grey;
+}
+.caption {
+    height: 120px;
+}
