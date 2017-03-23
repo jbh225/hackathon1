@@ -2,7 +2,7 @@
     if (isset($_GET['produit'])) $produit = $_GET['produit'];
     if (isset($_GET['nbprod'])) $nbprod = $_GET['nbprod'];
     if (isset($_GET['nbpages'])) $nbpages = $_GET['nbpages'];
-    if (isset($_GET['numpage'])) $numpage = $_GET['numpages'];
+    if (isset($_GET['numpage'])) $numpage = $_GET['numpage'];
     else $numpage = 1;
 
     $rep = file_get_contents('https://fr-en.openfoodfacts.org/category/'.$produit.'/'.$numpage.'.json');
@@ -51,6 +51,22 @@
                 <?php echo $nbprod; ?> produits
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 page <?php echo $numpage.'/'.$nbpages; ?>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <?php
+                // --- preparation des boutons page precedente/suivante
+                $avant = $apres = 'products.php?produit=' . $produit . '&nbprod=' . $nbprod . '&nbpages=' . $nbpages;
+                $avant .= '&numpage='.($numpage-1);
+                $apres .= '&numpage='.($numpage+1);
+                if ( $numpage > 1 ) {
+                    echo '<a class="btn btn-default avant" href="'.$avant.'">Page précédente</a>';
+                    echo '&nbsp;&nbsp;';
+                }
+                if ( $numpage < $nbpages ) {
+                    echo '<a class="btn btn-default apres" href="'.$apres.'">Page suivante</a>';
+                }
+
+
+                ?>
             </h2>
 
         </div>
@@ -60,19 +76,27 @@
     <?php
 
         foreach ($products as $product) {
-            if ( property_exists($product, 'image_front_thumb_url') ) $urlimg = $product->image_front_thumb_url;
+            if ( property_exists($product, 'image_front_url') ) $urlimg = $product->image_front_url;
             elseif ( property_exists($product, 'image_front_small_url') ) $urlimg = $product->image_front_small_url;
-            elseif ( property_exists($product, 'image_front_url') ) $urlimg = $product->image_front_url;
+            elseif ( property_exists($product, 'image_front_thumb_url') ) $urlimg = $product->image_front_thumb_url;
             echo '
-            <div class="col-lg-3 text-center">
-                <div class="thumbnail vignette">
-                    <img class="miniature" src="'.$urlimg.'" alt="...">
-                    <div class="caption">
-                        <h3>'.$product->product_name_fr.'</h3>
+                <div class="col-lg-3 text-center">
+                    <div class="thumbnail vignette">
+                        <img class="miniature" src="'.$urlimg.'" alt="...">
+                        <div class="caption">
+                            <h3>'.$product->product_name_fr.'</h3>
+                        </div>
+                        <p>
+            ';
+                            if ( property_exists($product, 'nutrition_grades') ) {
+                                echo '<img class="nutrigrade" src="img/nutriscore-'.$product->nutrition_grades.'.svg" />';
+                                echo '&nbsp;&nbsp;';
+                            }
+            echo '
+                            <a href="calories.html" class="btn btn-default" role="button">Manger</a>
+                        </p>
                     </div>
-                    <p><a href="calories.html" class="btn btn-default" role="button">Manger</a></p>
                 </div>
-            </div>
             ';
         }
     ?>
