@@ -1,6 +1,6 @@
 <?php
 
-define("SERVEUR", "localhost");
+define("SERVER", "localhost");
 define("USER", "patoche");
-define("PASSE", "fooD");
+define("PASS", "fooD");
 define("DB", "alimentation");
