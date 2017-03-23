@@ -14,7 +14,7 @@ $req = mysqli_query($bdd,$sql);
 
 
 
-$fichier = '/home/wilder10/checkpoints/hackathon/sports.csv';
+$fichier = 'sports.csv';
 $fexp = fopen($fichier, 'r');
 if (($ligne = fgetcsv($fexp, 2500, ';')) !== false) { // lecture ligne de titres de colonnes
 
