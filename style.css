@@ -1,0 +1,24 @@
+.jumbotron{
+    padding-top: 10px;
+    background-color: #474E5D; 
+    background: url("images/yogurt.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: black;
+    height: 100px;
+    font-family: 'Gloria Hallelujah', cursive;
+    height: 300px;     
+}
+
+.head{
+    font-family: normal ;
+    font-weight: normal;
+    color: red;
+    font-family: 'Pacifico', cursive; 
+    margin-left: 600px;
+    margin-right: 600px;
+    font-size: 80px;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+}
