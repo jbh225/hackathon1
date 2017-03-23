@@ -14,7 +14,7 @@ $req = mysqli_query($bdd,$sql);
 
 
 
-$fichier = '/home/wilder10/checkpoints/hackathon/sports.csv';
+$fichier = 'sports.csv';
 $fexp = fopen($fichier, 'r');
 if (($ligne = fgetcsv($fexp, 2500, ';')) !== false) { // lecture ligne de titres de colonnes
 
@@ -30,30 +30,23 @@ if (($ligne = fgetcsv($fexp, 2500, ';')) !== false) { // lecture ligne de titres
             $intensite .= $infos[$i];
         }
         // --- on a 2 ou 3 elements : sport, (intensite) et calories
-        $sql = "SELECT * FROM sports WHERE sport='$sport'";
-
-        //echo $sql.'<br />';
-
-        $req = mysqli_query($bdd, $sql);
-
-
-        //echo mysqli_num_rows($req);
-
+        $sql = "SELECT * FROM sports WHERE sport='".addslashes($sport)."'";
+        $req = mysqli_query($bdd,$sql);
         if ( mysqli_num_rows($req) == 0 ) {
             // --- la ligne n'existe pas encore
-            $sql = "INSERT INTO sports (sport, calories) VALUES ('$sport', ";
+            $sql = "INSERT INTO sports (sport, calories) VALUES ('".addslashes($sport)."', ";
             if ( $nbinfos > 2 ) $sql .= "0)";
             else $sql .= "$calories)";
             $req = mysqli_query($bdd,$sql);
             if ( $nbinfos > 2 ) {
                 // --- il faut aussi enregistrer l'intensite
                 // --- on relit pour recuperer l'id du sport que l'on vient de creer
-                $sql="SELECT * FROM sports WHERE sport='$sport'";
+                $sql="SELECT * FROM sports WHERE sport='".addslashes($sport)."'";
                 $req = mysqli_query($bdd,$sql);
                 $res = mysqli_fetch_assoc($req);
                 $idsport = $res['idsport'];
                 // --- on cree l'intensite
-                $sql = "INSERT INTO intensites (libelle, idsport, calories) VALUES ('$intensite', $idsport, $calories)";
+                $sql = "INSERT INTO intensite (libelle, idsport, calories) VALUES ('".addslashes($intensite)."', $idsport, $calories)";
                 $req = mysqli_query($bdd,$sql);
             }
         }
@@ -63,12 +56,12 @@ if (($ligne = fgetcsv($fexp, 2500, ';')) !== false) { // lecture ligne de titres
             $res = mysqli_fetch_assoc($req);
             $idsport = $res['idsport'];
             // --- on cree l'intensite
-            $sql = "INSERT INTO intensites (libelle, idsport, calories) VALUES ('$intensite', $idsport, $calories)";
+            $sql = "INSERT INTO intensite (libelle, idsport, calories) VALUES ('".addslashes($intensite)."', $idsport, $calories)";
             $req = mysqli_query($bdd,$sql);
         }
+        echo $sport.' '.$intensite.' '.$calories.'<br />';
     }
 }
 fclose($fexp);
-
 
 ?>
