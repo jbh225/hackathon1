@@ -30,29 +30,41 @@ if (isset($_POST['btnSubmit'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="Fr">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="utf-8">
-    <title>Bien manger c'est important</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <meta charset="UTF-8">
+    <title>BOUGER + / MANGER +</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Style Page 2 -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <title>Bien manger c'est important</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Nunito" rel="stylesheet">
+
 </head>
 <body>
-
 <header>
     <div class="jumbotron">
-
+        <h1>Bougez +
+            <small>pour manger +</small>
+        </h1>
     </div>
 </header>
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12">
-            <h1>Vous recherchez un produit?</h1>
+        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+            <h2>Vous recherchez un produit ?</h2>
             <p class="erreur"><?php echo $erreur; ?></p>
             <form method="post" action="index.php">
                 <div class="form-group">

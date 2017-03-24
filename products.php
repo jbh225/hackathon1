@@ -1,19 +1,15 @@
 <?php
-    if (isset($_GET['produit'])) $produit = $_GET['produit'];
-    if (isset($_GET['nbprod'])) $nbprod = $_GET['nbprod'];
-    if (isset($_GET['nbpages'])) $nbpages = $_GET['nbpages'];
-    if (isset($_GET['numpage'])) $numpage = $_GET['numpage'];
-    else $numpage = 1;
+if (isset($_GET['produit'])) $produit = $_GET['produit'];
+if (isset($_GET['nbprod'])) $nbprod = $_GET['nbprod'];
+if (isset($_GET['nbpages'])) $nbpages = $_GET['nbpages'];
+if (isset($_GET['numpage'])) $numpage = $_GET['numpage'];
+else $numpage = 1;
 
-    $rep = file_get_contents('https://fr-en.openfoodfacts.org/category/'.$produit.'/'.$numpage.'.json');
-    $page = json_decode($rep);
-    $products = $page->products;
-
-
-
+$rep = file_get_contents('https://fr-en.openfoodfacts.org/category/' . $produit . '/' . $numpage . '.json');
+$page = json_decode($rep);
+$products = $page->products;
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
@@ -31,41 +27,53 @@
 
     <!-- Style Page 2 -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="cam.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Nunito" rel="stylesheet">
+
 </head>
-<body>
+<div>
 <header>
+    <div class="jumbotron">
         <h1>Bougez +
             <small>pour manger +</small>
         </h1>
-        <hr>
+    </div>
 </header>
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12">
+        <span class="col-xs-12">
+
+
+
             <h2>
+                <span class="retour"
+                <button><a href="index.php" button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    </a></button>
+                </span>
+            &nbsp;&nbsp &nbsp;&nbsp
                 Produit : <?php echo $produit; ?>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <?php echo $nbprod; ?> produits
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                page <?php echo $numpage.'/'.$nbpages; ?>
+                page <?php echo $numpage . '/' . $nbpages; ?>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <?php
                 // --- preparation des boutons page precedente/suivante
                 $avant = $apres = 'products.php?produit=' . $produit . '&nbprod=' . $nbprod . '&nbpages=' . $nbpages;
-                $avant .= '&numpage='.($numpage-1);
-                $apres .= '&numpage='.($numpage+1);
-                if ( $numpage > 1 ) {
-                    echo '<a class="btn btn-default avant" href="'.$avant.'">Page précédente</a>';
+                $avant .= '&numpage=' . ($numpage - 1);
+                $apres .= '&numpage=' . ($numpage + 1);
+                if ($numpage > 1) {
+                    echo '<a class="btn btn-default avant" href="' . $avant . '">Page précédente</a>';
                     echo '&nbsp;&nbsp;';
                 }
-                if ( $numpage < $nbpages ) {
-                    echo '<a class="btn btn-default apres" href="'.$apres.'">Page suivante</a>';
+                if ($numpage < $nbpages) {
+                    echo '<a class="btn btn-default apres" href="' . $apres . '">Page suivante</a>';
                 }
-
 
                 ?>
             </h2>
@@ -74,7 +82,7 @@
     </div>
 
     <div class="row">
-    <?php
+        <?php
 
         foreach ($products as $product) {
             if ( property_exists($product, 'image_front_url') ) $urlimg = $product->image_front_url;
@@ -85,53 +93,30 @@
             echo '
                 <div class="col-lg-3 text-center">
                     <div class="thumbnail vignette">
-                        <img class="miniature" src="'.$urlimg.'" alt="...">
+                        <img class="miniature" src="' . $urlimg . '" alt="...">
                         <div class="caption">
                             <h3>'.$name.'</h3>
                         </div>
                         <p>
             ';
-                            if ( property_exists($product, 'nutrition_grades') ) {
-                                echo '<img class="nutrigrade" src="images/nutriscore-'.$product->nutrition_grades.'.svg" />';
-                                echo '&nbsp;&nbsp;';
-                            }
+            if (property_exists($product, 'nutrition_grades')) {
+                echo '<img class="nutrigrade" src="images/nutriscore-' . $product->nutrition_grades . '.svg" />';
+                echo '&nbsp;&nbsp;';
+            }
             echo '
-                            <a href="calories.php?id='.$product->id.'" class="btn btn-default" role="button">Manger</a>
+                            <a href="calories.php?id=' . $product->id . '" class="btn btn-default" role="button">Manger</a>
                         </p>
                     </div>
                 </div>
             ';
         }
-    ?>
- 
+        ?>
+
     </div>
 </div>
 
-<footer>
-    <nav aria-label="Page navigation">
-        <ul class="pagination">
-            <li>
-                <a href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-                <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</footer>
 </body>
 
-
 <link href="js/bootstrap.js">
-
 
 </html>
