@@ -88,7 +88,7 @@ $products = $page->products;
 
         foreach ($products as $product) {
             $id = $product->id;
-            $urlimg = '';
+            $urlimg = 'images/noimg.jpg';
             if (property_exists($product, 'image_front_url')) $urlimg = $product->image_front_url;
             elseif (property_exists($product, 'image_front_small_url')) $urlimg = $product->image_front_small_url;
             elseif (property_exists($product, 'image_front_thumb_url')) $urlimg = $product->image_front_thumb_url;
@@ -97,32 +97,80 @@ $products = $page->products;
             elseif (property_exists($product, 'generic_name_fr')) $name = $product->generic_name_fr;
             echo '
 
-                <div class="col-lg-3 text-center">
+                <div class="col-lg-3 text-center ">
                     <div class="thumbnail vignette">
-                        <img class="miniature" src="' . $urlimg . '" alt="...">
+                        <a class="txtfoot" data-toggle="modal" data-target="#'.$id.'">
+                            <img class="miniature" src="' . $urlimg . '" alt="..." />
+                        </a>
                         <div class="caption">
                             <h3>' . $name . '</h3>
                         </div>
                         <p>
             ';
+            $nutrigrade = '';
             if (property_exists($product, 'nutrition_grades')) {
-                echo '<img class="nutrigrade" src="images/nutriscore-' . $product->nutrition_grades . '.svg" />';
+                $nutrigrade = $product->nutrition_grades;
+                echo '<img class="nutrigrade" src="images/nutriscore-' . $nutrigrade . '.svg" />';
                 echo '&nbsp;&nbsp;';
             }
             echo '
-                            <a href="calories.php?id=' . $product->id . '" class="btn btn-default" role="button">Manger</a>
+                            <a href="calories.php?id=' . $id . '" class="btn btn-default" role="button">Manger</a>
                         </p>
+                    </div>
+                    
+                    <div class="modal fade" id="'.$id.'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h3 class="modal-title" id="myModalLabel">'.$name.'</h3>
+                                </div>
+                                <div class="modal-body legal">
+                                    <img class="xl-img" src="'.$urlimg.'" />
+            ';
+                                    // --- recuperation des infos produit
+                                    $rep2 = file_get_contents('http://fr.openfoodfacts.org/api/v0/produit/' . $id . '.json');
+                                    $infos2 = json_decode($rep2);
+                                    $product2 = $infos2->product;
+                                    $ingredients = 'Non précisé';
+                                    if (property_exists($product2, 'ingredients_text')) $ingredients = $product->ingredients_text;
+                                    echo '<br />';
+                                    $kcal = 'Non précisée';
+                                    if (property_exists($product2, 'nutriments')) {
+                                        $energie = $product2->nutriments;
+                                        if (property_exists($energie, 'energy')) {
+                                            $kj = $energie->energy;
+                                            $kcal = round($kj * 0.239, 0);
+                                        }
+                                    }
+                                    echo '<h4>Ingrédients :</h4><p>'.$ingredients.'</p>';
+                                    echo '<h4>';
+                                    if ( $nutrigrade != '' ) {
+                                        echo '<img class="nutrigrade" src="images/nutriscore-' . $nutrigrade . '.svg" />&nbsp;&nbsp;';
+                                    }
+            echo '
+                                    Valeur énergétique : '.$kcal.'Kcal </h4>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             ';
         }
         ?>
+
+
+
     </div>
 </div>
 
 </body>
 
-<link href="js/bootstrap.js">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
 
 </html>

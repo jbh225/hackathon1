@@ -49,19 +49,34 @@ body {
     color: red;
 }
 
-.thumbnail img {
+.thumbnail a img {
     height: 200px;
     margin-top: 20px;
 }
 
+.vignette {
+    height: 420px;
+}
+
 .caption {
-    height: 120px;
+    height: 140px;
+    overflow: hidden;
 }
 
 img.nutrigrade {
     height: 50px;
     margin-top: -10px;
     border: 0px;
+}
+
+/* --- modales --- */
+h4 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.xl-img {
+    width: 400px;
 }
 
 /* --- calories --- */
