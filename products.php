@@ -39,7 +39,7 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Nunito" rel="stylesheet">
 
 </head>
-<body>
+<div>
 <header>
     <div class="jumbotron">
         <h1>Bougez +
@@ -50,8 +50,17 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12">
+        <span class="col-xs-12">
+
+
+
             <h2>
+                <span class="retour"
+                <button><a href="index.php" button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    </a></button>
+                </span>
+            &nbsp;&nbsp &nbsp;&nbsp
                 Produit : <?php echo $produit; ?>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <?php echo $nbprod; ?> produits
@@ -109,6 +118,7 @@
  
     </div>
 </div>
+
 </body>
 
 

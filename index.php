@@ -29,7 +29,7 @@ if (isset($_POST['btnSubmit'])) {
 }
 ?>
 
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
