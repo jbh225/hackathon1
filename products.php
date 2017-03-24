@@ -34,13 +34,18 @@
     <link rel="stylesheet" type="text/css" href="cam.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Nunito" rel="stylesheet">
+
 </head>
 <body>
 <header>
+    <div class="jumbotron">
         <h1>Bougez +
             <small>pour manger +</small>
         </h1>
-        <hr>
+    </div>
 </header>
 
 <div class="container">
@@ -104,28 +109,6 @@
  
     </div>
 </div>
-
-<footer>
-    <nav aria-label="Page navigation">
-        <ul class="pagination">
-            <li>
-                <a href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-                <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</footer>
 </body>
 
 

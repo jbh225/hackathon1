@@ -8,19 +8,27 @@
     background-size: cover;
     color: black;
     height: 100px;
-    font-family: 'Gloria Hallelujah', cursive;
     height: 300px;     
 }
 
-.head{
-    font-family: normal ;
-    font-weight: normal;
-    color: red;
-    font-family: 'Pacifico', cursive; 
-    margin-left: 600px;
-    margin-right: 600px;
-    font-size: 80px;
-    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+h1 {
+    margin-top: 100px;
+    font-family: 'Baloo Bhaina', cursive;
+    text-align: center;
+    text-shadow: 0 0 100px white;
+}
+
+h1 small {
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
 }
 
 .erreur {
@@ -35,7 +43,6 @@
 .thumbnail img {
     height: 200px;
     margin-top:20px;
-    border: 2px solid grey;
 }
 .caption {
     height: 120px;
