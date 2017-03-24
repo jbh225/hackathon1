@@ -80,12 +80,14 @@
             if ( property_exists($product, 'image_front_url') ) $urlimg = $product->image_front_url;
             elseif ( property_exists($product, 'image_front_small_url') ) $urlimg = $product->image_front_small_url;
             elseif ( property_exists($product, 'image_front_thumb_url') ) $urlimg = $product->image_front_thumb_url;
+            if ( property_exists($product, 'product_name_fr') ) $name = $product->product_name_fr;
+            elseif ( property_exists($product, 'generic_name_fr') ) $name = $product->generic_name_fr;
             echo '
                 <div class="col-lg-3 text-center">
                     <div class="thumbnail vignette">
                         <img class="miniature" src="'.$urlimg.'" alt="...">
                         <div class="caption">
-                            <h3>'.$product->product_name_fr.'</h3>
+                            <h3>'.$name.'</h3>
                         </div>
                         <p>
             ';
