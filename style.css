@@ -1,14 +1,14 @@
-.jumbotron{
+.jumbotron {
     padding-top: 10px;
-    background-color: #474E5D; 
-    background: url("images/yogurt.jpg")no-repeat center center fixed;
+    background-color: #474E5D;
+    background: url("images/yogurt.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: black;
     height: 100px;
-    height: 300px;     
+    height: 300px;
 }
 
 h1 {
@@ -37,16 +37,15 @@ body {
     color: red;
 }
 
-.vignette {
-    height: 400px;
-}
 .thumbnail img {
     height: 200px;
-    margin-top:20px;
+    margin-top: 20px;
 }
+
 .caption {
     height: 120px;
 }
+
 img.nutrigrade {
     height:40px;
     margin-top:-10px;
@@ -55,4 +54,9 @@ img.nutrigrade {
 
 .retour{
     padding-top: 40px;
+
+    height: 40px;
+    margin-top: -10px;
+    border: 0px;
+
 }

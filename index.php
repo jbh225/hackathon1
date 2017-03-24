@@ -45,7 +45,6 @@ if (isset($_POST['btnSubmit'])) {
 
     <!-- Style Page 2 -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="cam.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -64,7 +63,7 @@ if (isset($_POST['btnSubmit'])) {
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
             <h2>Vous recherchez un produit ?</h2>
             <p class="erreur"><?php echo $erreur; ?></p>
             <form method="post" action="index.php">
