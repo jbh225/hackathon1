@@ -63,16 +63,16 @@ if (isset($_POST['btnSubmit'])) {
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
-            <h2>Vous recherchez un produit ?</h2>
+        <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
+            <h3>Quel produit recherchez-vous ?</h3>
             <p class="erreur"><?php echo $erreur; ?></p>
             <form method="post" action="index.php">
                 <div class="form-group">
-                    <input type="text" name="produit" class="form-control" id="produit" placeholder="Type de produit"
+                    <input type="text" name="produit" class="form-control" id="produit" placeholder="Entrer la catégorie de produits"
                            value="<?php echo $produit; ?>"/>
                 </div>
-                <input class="btn btn-default" type="reset" name="btnReset" value="Effacer"/>
-                <input class="btn btn-success" type="submit" name="btnSubmit" value="Sélectionner"/>
+                <input class="btn btn-default" type="reset" name="btnReset" value="Annuler"/>
+                <input class="btn btn-success" type="submit" name="btnSubmit" value="Valider"/>
             </form>
         </div>
     </div>

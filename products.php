@@ -34,54 +34,56 @@ $products = $page->products;
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Nunito" rel="stylesheet">
 
 </head>
-<div>
-    <header>
-        <div class="jumbotron">
-            <h1>Bougez +
-                <small>pour manger +</small>
-            </h1>
-        </div>
-    </header>
 
-    <div class="container">
-        <div class="row">
+<header>
+    <div class="jumbotron">
+        <h1>Bougez +
+            <small>pour manger +</small>
+        </h1>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
         <span class="col-xs-12">
-
-
 
             <h2>
                 <span class="retour">
-                <button><a href="index.php" button type="button" class="btn btn-default" aria-label="Left Align">
+                    <a href="index.php" button type="button" class="btn btn-default" aria-label="Left Align">
                         <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                    </a></button>
+                    </a>
                 </span>
-            &nbsp;&nbsp &nbsp;&nbsp
-                Produit : <?php echo $produit; ?>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp &nbsp
+
+                Catégorie : <?php echo $produit; ?>
+                &nbsp | &nbsp
+
                 <?php echo $nbprod; ?> produits
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp | &nbsp
+
                 page <?php echo $numpage . '/' . $nbpages; ?>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp &nbsp
+
                 <?php
                 // --- preparation des boutons page precedente/suivante
                 $avant = $apres = 'products.php?produit=' . $produit . '&nbprod=' . $nbprod . '&nbpages=' . $nbpages;
                 $avant .= '&numpage=' . ($numpage - 1);
                 $apres .= '&numpage=' . ($numpage + 1);
                 if ($numpage > 1) {
-                    echo '<a class="btn btn-default avant" href="' . $avant . '">Page précédente</a>';
+                    echo '<a class="btn btn-default avant" href="' . $avant . '"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>';
                     echo '&nbsp;&nbsp;';
                 }
                 if ($numpage < $nbpages) {
-                    echo '<a class="btn btn-default apres" href="' . $apres . '">Page suivante</a>';
+                    echo '<a class="btn btn-default apres" href="' . $apres . '"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>';
                 }
-
                 ?>
             </h2>
 
-        </div>
     </div>
 
+
     <div class="row">
+
         <?php
 
         foreach ($products as $product) {
@@ -94,6 +96,7 @@ $products = $page->products;
             if (property_exists($product, 'product_name_fr')) $name = $product->product_name_fr;
             elseif (property_exists($product, 'generic_name_fr')) $name = $product->generic_name_fr;
             echo '
+
                 <div class="col-lg-3 text-center">
                     <div class="thumbnail vignette">
                         <img class="miniature" src="' . $urlimg . '" alt="...">
@@ -113,10 +116,8 @@ $products = $page->products;
                 </div>
 
             ';
-
         }
         ?>
-
     </div>
 </div>
 

@@ -27,8 +27,8 @@ else {
     $kj = $energie->energy;
     $kcal = round($kj * 0.239, 0);
     $name = '';
-    if ( property_exists($product, 'product_name_fr') ) $name = $product->product_name_fr;
-    elseif ( property_exists($product, 'generic_name_fr') ) $name = $product->generic_name_fr;
+    if (property_exists($product, 'product_name_fr')) $name = $product->product_name_fr;
+    elseif (property_exists($product, 'generic_name_fr')) $name = $product->generic_name_fr;
 
 
 }
@@ -75,14 +75,14 @@ else {
 
             <select name="sport" id="sport" onchange="majIntensite();">
                 <?php
-                    foreach ( $sports as $id => $sport ) {
-                        echo '<option value="' . $id . '">' . $sport . '</option>';
-                    }
+                foreach ($sports as $id => $sport) {
+                    echo '<option value="' . $id . '">' . $sport . '</option>';
+                }
                 ?>
             </select>
-            <br /><br />
+            <br/><br/>
             <select name="intensite" id="intensite">
-                <option value="0"> - Aucun choix - </option>
+                <option value="0"> - Aucun choix -</option>
             </select>
             <br/>
             <br/>
@@ -94,11 +94,12 @@ else {
             <br/>
             <br/>
             <br/>
+
             <span class="retour">
-                <a href="index.php" button type="button" class="btn btn-default" aria-label="Left Align"><button>
-                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                    </button></a>
-                </span>
+                <a href="index.php" button type="button" class="btn btn-default" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                </a>
+            </span>
             <!--
            <a href="index.php" class="btn btn-default">Choix d'un type de produit</a>
             -->
