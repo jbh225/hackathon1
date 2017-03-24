@@ -26,7 +26,9 @@ else {
     $energie = $product->nutriments;
     $kj = $energie->energy;
     $kcal = round($kj * 0.239, 0);
-    $name = $product->product_name_fr;
+    $name = '';
+    if ( property_exists($product, 'product_name_fr') ) $name = $product->product_name_fr;
+    elseif ( property_exists($product, 'generic_name_fr') ) $name = $product->generic_name_fr;
 
 
 }
@@ -92,7 +94,14 @@ else {
             <br/>
             <br/>
             <br/>
+            <span class="retour">
+                <a href="index.php" button type="button" class="btn btn-default" aria-label="Left Align"><button>
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    </button></a>
+                </span>
+            <!--
            <a href="index.php" class="btn btn-default">Choix d'un type de produit</a>
+            -->
 
         </div>
 

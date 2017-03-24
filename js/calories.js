@@ -53,16 +53,14 @@ function majListe(reponse) {
 // ---------------------------------------------------------------------------------------------
 function calcule() {
     // --- depense horaire
-    var depense = document.getElementById('intensite').value + calories[document.getElementById('sport').value];
+    var depense = parseInt(calories[document.getElementById('sport').value]);
+    if ( depense == 0 ) depense = parseInt(document.getElementById('intensite').value);
     duree = kCal/depense;
-
-    console.log(document.getElementById('intensite').value)
-    console.log(depense+'  '+duree);
-
-    var texte = 'Pour brûler les '+kCal+' calories de votre '+nomProd+',<br />vous devez pratiquer l\'activité choisie ';
-    texte += 'pendant '+ Math.round(duree*60) + ' heures.';
+    if ( nomProd == '' ) nomProd = 'choix';
+    var texte = 'Pour brûler les '+kCal+' calories de votre '+nomProd+',<br />vous devez pratiquer l\'activité choisie pendant ';
+    var temps = Math.round(duree*60);
+    if ( temps < 60 ) texte += temps + ' minutes.';
+    else texte += Math.floor(temps/60) + ' heure(s) et ' + (temps % 60) + 'minute(s)';
     document.getElementById('resultat').innerHTML = texte;
-
-
 }
 // ---------------------------------------------------------------------------------------------

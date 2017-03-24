@@ -35,22 +35,22 @@ $products = $page->products;
 
 </head>
 <div>
-<header>
-    <div class="jumbotron">
-        <h1>Bougez +
-            <small>pour manger +</small>
-        </h1>
-    </div>
-</header>
+    <header>
+        <div class="jumbotron">
+            <h1>Bougez +
+                <small>pour manger +</small>
+            </h1>
+        </div>
+    </header>
 
-<div class="container">
-    <div class="row">
+    <div class="container">
+        <div class="row">
         <span class="col-xs-12">
 
 
 
             <h2>
-                <span class="retour"
+                <span class="retour">
                 <button><a href="index.php" button type="button" class="btn btn-default" aria-label="Left Align">
                         <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                     </a></button>
@@ -85,19 +85,20 @@ $products = $page->products;
         <?php
 
         foreach ($products as $product) {
+            $id = $product->id;
             $urlimg = '';
-            if ( property_exists($product, 'image_front_url') ) $urlimg = $product->image_front_url;
-            elseif ( property_exists($product, 'image_front_small_url') ) $urlimg = $product->image_front_small_url;
-            elseif ( property_exists($product, 'image_front_thumb_url') ) $urlimg = $product->image_front_thumb_url;
+            if (property_exists($product, 'image_front_url')) $urlimg = $product->image_front_url;
+            elseif (property_exists($product, 'image_front_small_url')) $urlimg = $product->image_front_small_url;
+            elseif (property_exists($product, 'image_front_thumb_url')) $urlimg = $product->image_front_thumb_url;
             $name = '';
-            if ( property_exists($product, 'product_name_fr') ) $name = $product->product_name_fr;
-            elseif ( property_exists($product, 'generic_name_fr') ) $name = $product->generic_name_fr;
+            if (property_exists($product, 'product_name_fr')) $name = $product->product_name_fr;
+            elseif (property_exists($product, 'generic_name_fr')) $name = $product->generic_name_fr;
             echo '
                 <div class="col-lg-3 text-center">
                     <div class="thumbnail vignette">
                         <img class="miniature" src="' . $urlimg . '" alt="...">
                         <div class="caption">
-                            <h3>'.$name.'</h3>
+                            <h3>' . $name . '</h3>
                         </div>
                         <p>
             ';
@@ -110,7 +111,9 @@ $products = $page->products;
                         </p>
                     </div>
                 </div>
+
             ';
+
         }
         ?>
 
