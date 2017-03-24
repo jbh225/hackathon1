@@ -68,7 +68,7 @@ else {
 
 <header>
     <div class="jumbotron">
-        <h1>Bougez +
+        <h1 ombre>Bougez +
             <small>pour manger +</small>
         </h1>
     </div>
