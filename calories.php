@@ -26,6 +26,7 @@ else {
     $energie = $product->nutriments;
     $kj = $energie->energy;
     $kcal = round($kj * 0.239, 0);
+    $name = $product->product_name_fr;
 
 
 }
@@ -49,7 +50,7 @@ else {
     var calories = new Array();
     <?php foreach ($intensites as $id => $calories) echo "calories[$id] = $calories;"; ?>
     var kCal = <?php echo $kcal; ?>;
-    var nomProd = '<?php echo $product->product_name_fr; ?>';
+    var nomProd = '<?php echo $name; ?>';
 </script>
 <header>
     <div class="jumbotron">
@@ -88,6 +89,10 @@ else {
             <br/>
             <br/>
             <span id="resultat"></span>
+            <br/>
+            <br/>
+            <br/>
+           <a href="index.php" class="btn btn-default">Choix d'un type de produit</a>
 
         </div>
 
@@ -96,5 +101,6 @@ else {
 
 </div>
 <script type="text/javascript" src="js/calories.js"></script>
+<script>majIntensite();</script>
 </body>
 </html>

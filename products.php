@@ -85,9 +85,11 @@ $products = $page->products;
         <?php
 
         foreach ($products as $product) {
+            $urlimg = '';
             if ( property_exists($product, 'image_front_url') ) $urlimg = $product->image_front_url;
             elseif ( property_exists($product, 'image_front_small_url') ) $urlimg = $product->image_front_small_url;
             elseif ( property_exists($product, 'image_front_thumb_url') ) $urlimg = $product->image_front_thumb_url;
+            $name = '';
             if ( property_exists($product, 'product_name_fr') ) $name = $product->product_name_fr;
             elseif ( property_exists($product, 'generic_name_fr') ) $name = $product->generic_name_fr;
             echo '

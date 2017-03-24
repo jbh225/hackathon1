@@ -56,6 +56,7 @@ function calcule() {
     var depense = document.getElementById('intensite').value + calories[document.getElementById('sport').value];
     duree = kCal/depense;
 
+    console.log(document.getElementById('intensite').value)
     console.log(depense+'  '+duree);
 
     var texte = 'Pour brûler les '+kCal+' calories de votre '+nomProd+',<br />vous devez pratiquer l\'activité choisie ';
