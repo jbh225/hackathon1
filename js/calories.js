@@ -57,7 +57,7 @@ function calcule() {
     if ( depense == 0 ) depense = parseInt(document.getElementById('intensite').value);
     duree = kCal/depense;
     if ( nomProd == '' ) nomProd = 'choix';
-    var texte = 'Pour brûler les '+kCal+' calories de votre '+nomProd+',<br />vous devez pratiquer l\'activité choisie pendant ';
+    var texte = 'Pour brûler les '+kCal+' calories de votre '+nomProd+',<br />vous devez pratiquer l\'activité choisie ppendant ';
     var temps = Math.round(duree*60);
     if ( temps < 60 ) texte += temps + ' minutes.';
     else texte += Math.floor(temps/60) + ' heure(s) et ' + (temps % 60) + 'minute(s)';

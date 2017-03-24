@@ -97,7 +97,7 @@ $products = $page->products;
             elseif (property_exists($product, 'generic_name_fr')) $name = $product->generic_name_fr;
             echo '
 
-                <div class="col-lg-3 text-center">
+                <div class=" col-sm-6 col-lg-3 text-center">
                     <div class="thumbnail vignette">
                         <img class="miniature" src="' . $urlimg . '" alt="...">
                         <div class="caption">

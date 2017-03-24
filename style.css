@@ -33,6 +33,7 @@ h1 small {
 h2 {
     text-align: center;
     padding-bottom: 25px;
+    padding-top: 25px;
 }
 
 h3 {
@@ -72,4 +73,8 @@ img.nutrigrade {
 #resultat {
     font-size: 16px;
     color: mediumblue;
+}
+
+#thumbnail {
+    height: 500px;
 }

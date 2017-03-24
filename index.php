@@ -14,7 +14,7 @@ if (isset($_POST['btnSubmit'])) {
         // --- nombre de produits disponibles
         $nbprod = $page->count;
         if ($nbprod == 0) {
-            $erreur = 'Ce type de produit ne retourne aucun résultat. Tentez une autre formulation.';
+            $erreur = 'Ce type de produit ne retourne aucun résultat.<br>Tentez une autre formulation.';
         } else {
             // --- on a recupere des trucs, il va falloir les affiche
             // --- nombre de produits par page
