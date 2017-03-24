@@ -97,7 +97,7 @@ $products = $page->products;
             elseif (property_exists($product, 'generic_name_fr')) $name = $product->generic_name_fr;
             echo '
 
-                <div class="col-lg-3 text-center ">
+                <div class=" col-sm-6 col-lg-3 text-center">
                     <div class="thumbnail vignette">
                         <a class="txtfoot" data-toggle="modal" data-target="#'.$id.'">
                             <img class="miniature" src="' . $urlimg . '" alt="..." />
@@ -132,8 +132,9 @@ $products = $page->products;
                                     $rep2 = file_get_contents('http://fr.openfoodfacts.org/api/v0/produit/' . $id . '.json');
                                     $infos2 = json_decode($rep2);
                                     $product2 = $infos2->product;
-                                    $ingredients = 'Non précisé';
-                                    if (property_exists($product2, 'ingredients_text')) $ingredients = $product->ingredients_text;
+                                    $ingredients = '';
+                                    if (property_exists($product2, 'ingredients_text')) $ingredients = trim($product->ingredients_text);
+                                    if ( $ingredients == '') $ingredients = 'Non précisés';
                                     echo '<br />';
                                     $kcal = 'Non précisée';
                                     if (property_exists($product2, 'nutriments')) {

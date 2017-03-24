@@ -33,6 +33,7 @@ h1 small {
 h2 {
     text-align: center;
     padding-bottom: 25px;
+    padding-top: 25px;
 }
 
 h3 {
@@ -85,6 +86,11 @@ h4 {
 }
 
 #resultat {
-    font-size: 16px;
+    font-size: 24px;
     color: mediumblue;
+}
+
+.calor {
+    height: 640px;
+    padding: 0px 20px;
 }
