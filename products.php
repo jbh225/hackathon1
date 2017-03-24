@@ -141,7 +141,7 @@ $products = $page->products;
                                         $energie = $product2->nutriments;
                                         if (property_exists($energie, 'energy')) {
                                             $kj = $energie->energy;
-                                            $kcal = round($kj * 0.239, 0);
+                                            $kcal = round($kj * 0.239, 0).' Kcal';
                                         }
                                     }
                                     echo '<h4>Ingrédients :</h4><p>'.$ingredients.'</p>';
@@ -150,7 +150,7 @@ $products = $page->products;
                                         echo '<img class="nutrigrade" src="images/nutriscore-' . $nutrigrade . '.svg" />&nbsp;&nbsp;';
                                     }
             echo '
-                                    Valeur énergétique : '.$kcal.'Kcal </h4>
+                                    Valeur énergétique : '.$kcal.'</h4>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
